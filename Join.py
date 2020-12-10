@@ -6,6 +6,7 @@ config.read("config.ini")
 print(config['CLASSES']['period1_link'])
 #config['CLASSES'] = {'ServerAliveInternal': '45'}
 
+
 def joinmeeting(url):
     #todo if platform == windows, run this. Add if plat == mac and the correct command
     cmd = "zoom --url=" + str(url)

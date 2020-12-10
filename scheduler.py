@@ -43,21 +43,21 @@ def maain():
 
                 # tuesday/thursday schedule
                 if datetime.today().weekday() == tuesday or datetime.today().weekday() == thursday:
-                    if datetime.now().strftime("%H:%M") == "09:00":
-                        Join.chemistry() #todo instead of join.chem call from another file. Meeting.py then meeting.chem. Meeting.chem will handle the breakout rooms and stuff
+                    if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
+                        Join.period1() #todo Meeting.py then meeting.chem. Meeting.chem will handle the breakout rooms and stuff
                         #sleep time makes sure you dont join multiple times
                         time.sleep(60)
 
-                    elif datetime.now().strftime("%H:%M") == "10:30":
-                        Join.law() #todo this should become Join.period2 to access config
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period2_startTime']:
+                        Join.period2()
                         time.sleep(60)
 
-                    elif datetime.now().strftime("%H:%M") == "12:30":
-                        Join.english()
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period3_startTime']:
+                        Join.period3()
                         time.sleep(60)
 
-                    elif datetime.now().strftime("%H:%M") == "14:00":
-                         Join.art()
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period7_startTime']:
+                         Join.period7()
                          time.sleep(60)
 
 
