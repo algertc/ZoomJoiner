@@ -1,0 +1,18 @@
+Location of zoom executable: C:\Users\%user%\AppData\Roaming\Zoom\bin
+
+#todo VERY IMPORTANT: installer must include c++ build tools https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
+#todo AND http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=3021d52b-514e-41d3-ad02-438a3ba730ba
+#todo AND powershell module for gui clicking https://www.autoitscript.com/site/autoit/downloads/
+Bring up a join meeting dialog asking for the meeting ID
+zoom --url=zoommtg://zoom.us/join?action=join
+
+
+Directly join the meeting from the command line
+zoom --url=https://auhsdschools.zoom.us/j/85814123045?pwd=c25rUmdFcWhrZ00ydGVEK3hwNDdidz09&uname=Charles+Algert#succes
+
+
+Use pyautogui to detect the breakout room? maybe find another library to detect things on screen.
+Once breakout room is detected, leave programatically... kill zoom
+leave after 15 minutes? Consider other evasion techniques
+
+STOP!!!! use git for all new changes
