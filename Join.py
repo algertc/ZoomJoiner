@@ -65,7 +65,7 @@ def period7():
 # def math():
 #     joinmeeting("https://auhsdschools.zoom.us/j/6602696666?pwd=aE1vQVVvd1c4SDNTRThITGxaYjJ1QT09&uname=Charles+Algert#success")
 #
-# 
+#
 # def art():
 #     joinmeeting("https://auhsdschools.zoom.us/j/85814123045?pwd=c25rUmdFcWhrZ00ydGVEK3hwNDdidz09&uname=Charles+Algert#succes")
 
