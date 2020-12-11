@@ -1,5 +1,8 @@
 Location of zoom executable: C:\Users\%user%\AppData\Roaming\Zoom\bin
 
+#todo So sorry but your default browser has to be chrome
+#todo USER MUST BE LOGGED IN WITH AUTOFILL IN THEIR DEFUALT BROWSER
+#todo USER MUST ADD ZOOM TO THEIR PATH. CAN INSTALLER DO THIS FOR THEM?
 #todo VERY IMPORTANT: installer must include c++ build tools https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
 #todo AND http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=3021d52b-514e-41d3-ad02-438a3ba730ba
 #todo AND powershell module for gui clicking https://www.autoitscript.com/site/autoit/downloads/

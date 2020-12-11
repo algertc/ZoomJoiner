@@ -33,17 +33,21 @@ def login():
     app = Application(backend="uia").start("zoom --login")
     main_win = app.window(title='Zoom Cloud Meetings')
     signIn = main_win.child_window(title="Sign In", control_type="Button")
+    #todo return control identifiers or write to file and read the file
     try:
+        #todo IF control identifiers has attribute "child_window(title="Sign In", control_type="Button")" :
+        time.sleep(1)
         signIn.click()
-        time.sleep(0.3)
-    except:
-        try:
-            signInWithGoogle = main_win.child_window(title="Sign In with Google", control_type="Button")
-            signInWithGoogle.click()
+        #time.sleep(0.3)
+        time.sleep(1)
+        #todo check IF control identifiers has attribute "title="Sign In with Google", control_type="Button"
+        signInWithGoogle = main_win.child_window(title="Sign In with Google", control_type="Button")
+        signInWithGoogle.click()
+        #todo check if browser has opened
 
-        except:
-            #todo possibly try again before printing error. Make a counter and print on the second time through
-            print("SigninError")
+    except:
+        #todo possibly try again before printing error. Make a counter and print on the second time through
+        print("SigninError")
     #main_win.print_control_identifiers()
 login()
 
