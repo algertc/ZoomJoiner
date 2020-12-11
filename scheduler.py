@@ -42,6 +42,7 @@ def login():
             signInWithGoogle.click()
 
         except:
+            #todo possibly try again before printing error. Make a counter and print on the second time through
             print("SigninError")
     #main_win.print_control_identifiers()
 login()
@@ -67,6 +68,7 @@ def maain():
                 if datetime.today().weekday() == tuesday or datetime.today().weekday() == thursday:
                     if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
                         Join.period1() #todo Meeting.py then meeting.chem. Meeting.chem will handle the breakout rooms and stuff
+                        #TODO IF: the header for login with google exists in the window, quit zoom, run login(), then run the join again
                         #sleep time makes sure you dont join multiple times
                         time.sleep(60)
 

@@ -15,6 +15,8 @@ Use pyautogui to detect the breakout room? maybe find another library to detect 
 Once breakout room is detected, leave programatically... kill zoom
 leave after 15 minutes? Consider other evasion techniques
 
+#TODO IN SCHEDULER JOIN LINES ----> IF: the header for login with google exists in the window, quit zoom, run login(), then run the join again
+
 STOP!!!! use git for all new changes
 
 11111
