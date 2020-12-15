@@ -70,7 +70,7 @@ def login():
         #print(processID)
         time.sleep(1)
         #pywinauto.application.findwindows.find_element("Edge")
-        edge = Application(backend="uia").connect(title='Edge')
+        edge = Application(backend="uia").connect(path = )
         #edge = Application().connect(title="Edge")
         #mainwin_edge = edge.window(title='Sign In - Google Accounts and')
 
