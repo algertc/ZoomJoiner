@@ -5,6 +5,8 @@ import configparser
 import subprocess
 import psutil
 import pywinauto
+from selenium import webdriver
+
 
 #load the config
 config = configparser.ConfigParser()
@@ -34,7 +36,7 @@ def login():
 
     #First lets kill zoom to ensure consistency
     subprocess.call("taskkill /IM \"Zoom.exe\" /F")  #If this breaks, you could use $> tasklist | more and grep the output to a file then parse it for the word "zoom" to get the process ID and kill it that way.
-    subprocess.call("taskkill /IM \"msedge.exe\" /F")
+    subprocess.call("taskkill /IM \"chrome.exe\" /F")
     #launch zoom with win32 api
     app = Application(backend="uia").start("zoom --login")
     main_win = app.window(title='Zoom')
@@ -64,14 +66,16 @@ def login():
     except:
         pass
 
-    if "msedge.exe" in (p.name() for p in psutil.process_iter()):
+    if "chrome.exe" in (p.name() for p in psutil.process_iter()):
         print("ture")
         #processID = [p.info for p in psutil.process_iter(attrs=['pid', 'name']) if 'Sign In - Google Accounts' in p.info['name']]
         #print(processID)
         time.sleep(1)
         #pywinauto.application.findwindows.find_element("Edge")
-        edge = Application(backend="uia").connect(path = )
-        #edge = Application().connect(title="Edge")
+        chrome = Application(backend="uia").connect(path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+        chromewindow = chrome.top_window()
+        chromewindow.print_control_identifiers()
+
         #mainwin_edge = edge.window(title='Sign In - Google Accounts and')
 
 
