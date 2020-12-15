@@ -1,0 +1,5 @@
+Control Identifiers:
+
+Button - 'Sign In'    (L1620, T726, R1820, B758)
+['Sign In', 'Sign InButton', 'Button']
+child_window(title="Sign In", control_type="Button")

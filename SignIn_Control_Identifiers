@@ -1,0 +1,147 @@
+C:\Users\alger\PycharmProjects\notFuckedUp\venv\Scripts\python.exe C:/Users/alger/PycharmProjects/notFuckedUp/scheduler.py
+https://auhsdschools.zoom.us/j/7753695672?pwd=NTB1V1FRYTRnalBlYlBidnhXdDd2dz09&uname=Charles+Algert
+ERROR: The process "Zoom.exe" not found.
+Control Identifiers:
+
+Dialog - 'Zoom Cloud Meetings'    (L1420, T500, R2020, B900)
+['Zoom Cloud Meetings', 'Dialog', 'Zoom Cloud MeetingsDialog']
+child_window(title="Zoom Cloud Meetings", control_type="Window")
+   |
+   | TitleBar - ''    (L1439, T503, R2017, B526)
+   | ['TitleBar']
+   |    |
+   |    | Menu - 'System'    (L1428, T508, R1450, B530)
+   |    | ['Menu', 'SystemMenu', 'System', 'System0', 'System1']
+   |    | child_window(title="System", auto_id="MenuBar", control_type="MenuBar")
+   |    |    |
+   |    |    | MenuItem - 'System'    (L1428, T508, R1450, B530)
+   |    |    | ['MenuItem', 'SystemMenuItem', 'System2']
+   |    |    | child_window(title="System", control_type="MenuItem")
+   |    |
+   |    | Button - 'Minimize'    (L1878, T501, R1925, B526)
+   |    | ['Minimize', 'MinimizeButton', 'Button', 'Button0', 'Button1']
+   |    | child_window(title="Minimize", control_type="Button")
+   |    |
+   |    | Button - 'Maximize'    (L1925, T501, R1971, B526)
+   |    | ['Maximize', 'Button2', 'MaximizeButton']
+   |    | child_window(title="Maximize", control_type="Button")
+   |    |
+   |    | Button - 'Close'    (L1971, T501, R2018, B526)
+   |    | ['Button3', 'Close', 'CloseButton']
+   |    | child_window(title="Close", control_type="Button")
+   |
+   | Pane - ''    (L1423, T526, R2017, B897)
+   | ['Sign InPane', 'Pane', 'Sign InPane0', 'Sign InPane1', 'Pane0', 'Pane1']
+   |    |
+   |    | Pane - ''    (L1423, T526, R2017, B897)
+   |    | ['Sign InPane', 'Pane', 'Sign InPane0', 'Sign InPane1', 'Pane0', 'Pane1']
+   |    |    |
+   |    |    | Pane - ''    (L1453, T545, R1989, B847)
+   |    |    | ['Sign InPane3', 'Pane3']
+   |    |    |    |
+   |    |    |    | Pane - ''    (L1453, T545, R1713, B847)
+   |    |    |    | ['Sign InPane4', 'Pane4']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T545, R1713, B565)
+   |    |    |    |    | ['Pane5']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T565, R1713, B601)
+   |    |    |    |    | ['Sign InPane5', 'Pane6']
+   |    |    |    |    |    |
+   |    |    |    |    |    | Static - 'Sign In'    (L1453, T565, R1533, B601)
+   |    |    |    |    |    | ['Sign In', 'Static', 'Sign InStatic', 'Sign In0', 'Sign In1', 'Static0', 'Static1']
+   |    |    |    |    |    | child_window(title="Sign In", control_type="Text")
+   |    |    |    |    |    |
+   |    |    |    |    |    | Pane - ''    (L1533, T565, R1713, B601)
+   |    |    |    |    |    | ['Sign InPane6', 'Pane7']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T601, R1713, B625)
+   |    |    |    |    | ['Sign InPane7', 'Pane8']
+   |    |    |    |    |
+   |    |    |    |    | Edit - 'Email'    (L1453, T625, R1713, B665)
+   |    |    |    |    | ['Sign InEdit', 'Edit', 'Sign InEdit0', 'Sign InEdit1', 'Edit0', 'Edit1']
+   |    |    |    |    | child_window(title="Email", control_type="Edit")
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T665, R1713, B675)
+   |    |    |    |    | ['Sign InPane8', 'Pane9']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T675, R1713, B677)
+   |    |    |    |    | ['Sign InPane9', 'Pane10']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T677, R1713, B717)
+   |    |    |    |    | ['Sign InPane10', 'Pane11']
+   |    |    |    |    |    |
+   |    |    |    |    |    | Edit - 'Password'    (L1453, T677, R1713, B717)
+   |    |    |    |    |    | ['Sign InEdit2', 'Edit2']
+   |    |    |    |    |    | child_window(title="Password", control_type="Edit")
+   |    |    |    |    |    |
+   |    |    |    |    |    | Hyperlink - 'Forgot password Open in your default browser'    (L1664, T692, R1708, B710)
+   |    |    |    |    |    | ['Forgot password Open in your default browser', 'Hyperlink', 'Forgot password Open in your default browserHyperlink', 'Hyperlink0', 'Hyperlink1']
+   |    |    |    |    |    | child_window(title="Forgot password Open in your default browser", control_type="Hyperlink")
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T717, R1713, B725)
+   |    |    |    |    | ['Sign InPane11', 'Pane12']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T725, R1713, B731)
+   |    |    |    |    | ['Sign InPane12', 'Pane13']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1453, T731, R1713, B771)
+   |    |    |    |    | ['Sign InPane13', 'Pane14']
+   |    |    |    |    |    |
+   |    |    |    |    |    | CheckBox - 'Keep me signed in'    (L1453, T731, R1594, B771)
+   |    |    |    |    |    | ['Keep me signed in', 'CheckBox', 'Keep me signed inCheckBox']
+   |    |    |    |    |    | child_window(title="Keep me signed in", control_type="CheckBox")
+   |    |    |    |    |    |
+   |    |    |    |    |    | Pane - ''    (L1594, T731, R1636, B771)
+   |    |    |    |    |    | ['Sign InPane14', 'Pane15']
+   |    |    |    |    |    |
+   |    |    |    |    |    | Button - 'Sign In'    (L1636, T735, R1713, B767)
+   |    |    |    |    |    | ['Sign In2', 'Button4', 'Sign InButton']
+   |    |    |    |    |    | child_window(title="Sign In", control_type="Button")
+   |    |    |    |
+   |    |    |    | Pane - ''    (L1713, T625, R1776, B767)
+   |    |    |    | ['orPane', 'Pane16', 'orPane0', 'orPane1']
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1744, T625, R1745, B677)
+   |    |    |    |    | ['Sign InPane15', 'Pane17']
+   |    |    |    |    |
+   |    |    |    |    | Static - 'or'    (L1713, T685, R1776, B706)
+   |    |    |    |    | ['Static2', 'orStatic', 'or']
+   |    |    |    |    | child_window(title="or", control_type="Text")
+   |    |    |    |    |
+   |    |    |    |    | Pane - ''    (L1744, T714, R1745, B767)
+   |    |    |    |    | ['orPane2', 'Pane18']
+   |    |    |    |
+   |    |    |    | Pane - ''    (L1776, T631, R1987, B767)
+   |    |    |    | ['orPane3', 'Pane19']
+   |    |    |    |    |
+   |    |    |    |    | Button - 'Sign In with SSO'    (L1776, T631, R1985, B663)
+   |    |    |    |    | ['Sign In with SSOButton', 'Sign In with SSO', 'Button5']
+   |    |    |    |    | child_window(title="Sign In with SSO", control_type="Button")
+   |    |    |    |    |
+   |    |    |    |    | Button - 'Sign In with Google'    (L1776, T683, R1985, B715)
+   |    |    |    |    | ['Sign In with GoogleButton', 'Button6', 'Sign In with Google']
+   |    |    |    |    | child_window(title="Sign In with Google", control_type="Button")
+   |    |    |    |    |
+   |    |    |    |    | Button - 'Sign In with Facebook'    (L1776, T735, R1985, B767)
+   |    |    |    |    | ['Sign In with Facebook', 'Button7', 'Sign In with FacebookButton']
+   |    |    |    |    | child_window(title="Sign In with Facebook", control_type="Button")
+   |    |    |
+   |    |    | Pane - ''    (L1423, T847, R2017, B883)
+   |    |    | ['Sign InPane16', 'Pane20']
+   |    |    |    |
+   |    |    |    | Pane - ''    (L1423, T847, R1451, B883)
+   |    |    |    | ['Pane21']
+   |    |    |    |
+   |    |    |    | Button - 'Back to the previous window'    (L1451, T853, R1516, B877)
+   |    |    |    | ['Back to the previous windowButton', 'Button8', 'Back to the previous window']
+   |    |    |    | child_window(title="Back to the previous window", control_type="Button")
+   |    |    |    |
+   |    |    |    | Pane - ''    (L1516, T847, R1915, B883)
+   |    |    |    | ['Sign InPane17', 'Pane22']
+   |    |    |    |
+   |    |    |    | Hyperlink - 'Sign Up Free Open in your default browser'    (L1915, T857, R1985, B881)
+   |    |    |    | ['Sign Up Free Open in your default browser', 'Sign Up Free Open in your default browserHyperlink', 'Hyperlink2']
+   |    |    |    | child_window(title="Sign Up Free Open in your default browser", control_type="Hyperlink")
+
+Process finished with exit code 0
