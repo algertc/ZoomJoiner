@@ -6,6 +6,7 @@ import subprocess
 import psutil
 import pywinauto
 from selenium import webdriver
+import keyboard
 
 
 #load the config
@@ -67,14 +68,37 @@ def login():
         pass
 
     if "chrome.exe" in (p.name() for p in psutil.process_iter()):
-        print("ture")
+        print("Chromium.exe process is running")
         #processID = [p.info for p in psutil.process_iter(attrs=['pid', 'name']) if 'Sign In - Google Accounts' in p.info['name']]
         #print(processID)
-        time.sleep(1)
+        time.sleep(4)
+        #todo might need to select window first
+        # keyboard.write(config['GOOGLE_CREDENTIALS']['email'])
+        # keyboard.press("enter")
+        # time.sleep(2)
+        # keyboard.write(config['GOOGLE_CREDENTIALS']['password'])
+        # keyboard.press("enter")
+        time.sleep(2)
+        keyboard.press("tab")
+        time.sleep(0.3)
+        keyboard.press("tab")
+        time.sleep(0.6)
+        keyboard.press("enter")
+        time.sleep(0.4)
+        keyboard.press("enter")
+        #
+        time.sleep(3)
+        keyboard.press("tab")
+        time.sleep(0.4)
+        keyboard.press("tab")
+        time.sleep(0.4)
+        keyboard.press("enter")
+        time.sleep(0.4)
+        keyboard.press("enter")
         #pywinauto.application.findwindows.find_element("Edge")
-        chrome = Application(backend="uia").connect(path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-        chromewindow = chrome.top_window()
-        chromewindow.print_control_identifiers()
+        #chrome = Application(backend="uia").connect(path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
+        #chromewindow = chrome.top_window()
+
 
         #mainwin_edge = edge.window(title='Sign In - Google Accounts and')
 
@@ -97,8 +121,6 @@ def login():
     # except:
     #     #todo possibly try again before printing error. Make a counter and print on the second time through
     #     print("SigninError")
-
-login()
 
 def maain():
     while True:
