@@ -50,24 +50,34 @@ def maain():
                         #sleep time makes sure you dont join multiple times
                         time.sleep(60)
 
-                    if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_endtime']:
+
                         #leave
                         Zoom_Functions.leaveMeeting()
-
-
 
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period2_startTime']:
                         Join.period2()
                         time.sleep(60)
 
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period2_endtime']:
+                        # leave
+                        Zoom_Functions.leaveMeeting()
+
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period3_startTime']:
                         Join.period3()
                         time.sleep(60)
+
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period3_endtime']:
+                        # leave
+                        Zoom_Functions.leaveMeeting()
 
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period7_startTime']:
                          Join.period7()
                          time.sleep(60)
 
+                    if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period7_endtime']:
+                        #leave
+                        Zoom_Functions.leaveMeeting()
 
 
                 #wednesday/friday schedule
