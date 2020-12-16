@@ -98,3 +98,11 @@ def ConnectAndMute():
     keyboard.send("tab")
     time.sleep(0.3)
     keyboard.send("enter")
+
+
+def leaveMeeting():
+    time.sleep(1)
+    keyboard.send("tab")
+    time.sleep(0.3)
+    keyboard.send("enter")
+

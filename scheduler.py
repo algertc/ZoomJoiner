@@ -44,9 +44,17 @@ def maain():
                 # tuesday/thursday schedule
                 if datetime.today().weekday() == tuesday or datetime.today().weekday() == thursday:
                     if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
+
+                        # join
                         Join.period1()
                         #sleep time makes sure you dont join multiple times
                         time.sleep(60)
+
+                    if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
+                        #leave
+                        Zoom_Functions.leaveMeeting()
+
+
 
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period2_startTime']:
                         Join.period2()
