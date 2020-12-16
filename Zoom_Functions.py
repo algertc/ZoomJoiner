@@ -4,9 +4,8 @@ import psutil
 import keyboard
 from pywinauto import Desktop, Application
 
+
 # super long clunky function that kills zoom and chromium then logs the user back in to ensure that autologout doesn't interfere with the program
-
-
 def login():
     global app
     global main_win
@@ -16,8 +15,6 @@ def login():
     # launch zoom with win32 api
     app = Application(backend="uia").start("zoom --login")
     main_win = app.window(title='Zoom')
-
-    # todo find the leave wrapper and leave meeting
 
     # if the app opens to the "zoom cloud meetings" welcome screen, lets sign in
     try:
@@ -40,12 +37,7 @@ def login():
             # processID = [p.info for p in psutil.process_iter(attrs=['pid', 'name']) if 'Sign In - Google Accounts' in p.info['name']]
             # print(processID)
             time.sleep(4)
-            # todo might need to select window first
-            # keyboard.write(config['GOOGLE_CREDENTIALS']['email'])
-            # keyboard.press("enter")
-            # time.sleep(2)
-            # keyboard.write(config['GOOGLE_CREDENTIALS']['password'])
-            # keyboard.press("enter")
+            #
             time.sleep(2)
             keyboard.press("tab")
             time.sleep(0.3)
@@ -71,26 +63,15 @@ def login():
 
         # todo return control identifiers or write to file and read the file
 
-        # try:
         #     #todo IF control identifiers has attribute "child_window(title="Sign In", control_type="Button")" :
-        #     time.sleep(1)
-        #     signIn.click()
-        #     #time.sleep(0.3)
-        #     time.sleep(1)
         #     #todo check IF control identifiers has attribute "title="Sign In with Google", control_type="Button"
-        #     signInWithGoogle = main_win.child_window(title="Sign In with Google", control_type="Button")
-        #     signInWithGoogle.click()
         #     #todo check if browser has opened
         #
-        # except:
-        #     #todo possibly try again before printing error. Make a counter and print on the second time through
-        #     print("SigninError")
 
-        # SigninWithGoogleScreen.print_control_identifiers()
+        #     #todo possibly try again before printing error. Make a counter and print on the second time through
 
     except:
         pass
-
 
     return app
 
@@ -103,11 +84,8 @@ def leaveMeeting():
     time.sleep(18)
     #inMeeting.print_control_identifiers(filename="ctlIDS.txt")
     with open('ctlIDS.txt') as f:
-        if 'replaceWithLeavemeeting button' in f.read():
+        if 'leavemeeting' in f.read():
             pass
-            #click the button here
-        #else
-            # maybe loop?
 
 def ConnectAndMute():
     time.sleep(240) #todo change to 3 minutes in case teacher is slow with breakout room
@@ -120,6 +98,3 @@ def ConnectAndMute():
     keyboard.send("tab")
     time.sleep(0.3)
     keyboard.send("enter")
-
-#login()
-leaveMeeting()
