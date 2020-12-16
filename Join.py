@@ -71,7 +71,7 @@ def period7():
 
 def demo():
     Zoom_Functions.login()
-    joinmeeting("DEMOLINK")
+    joinmeeting("https://us04web.zoom.us/j/3047415884?pwd=QjVpWGFHTWIxcktRaGpJbS9FYjR6dz09")
     time.sleep(30)
     Zoom_Functions.ConnectAndMute()
 demo()

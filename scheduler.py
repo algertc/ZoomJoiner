@@ -51,7 +51,6 @@ def maain():
                         time.sleep(60)
 
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_endtime']:
-
                         #leave
                         Zoom_Functions.leaveMeeting()
 
@@ -92,14 +91,26 @@ def maain():
                         Join.period4()
                         #add delay to make sure you dont try to join multiple times
                         time.sleep(60)
+
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period4_endtime']:
+                        Zoom_Functions.leaveMeeting()
+
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period5_startTime']:
-                        if str(config['CLASSES']['period5_link']) != "none":
-                            Join.period5()
-                            time.sleep(60)
+                        Join.period5()
+                        time.sleep(60)
+
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period5_endtime']:
+                        Zoom_Functions.leaveMeeting()
+
 
                     elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period6_startTime']:
                         if str(config['CLASSES']['period6_link']) != "none":
                             Join.period6()
                             time.sleep(60)
+
+                    elif datetime.now().strftime("%H:%M") == config['SCHEDULE']['period6_endtime']:
+                        Zoom_Functions.leaveMeeting()
+
+
 
 
