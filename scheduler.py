@@ -39,9 +39,6 @@ def maain():
         #store the date
         date = datetime.now().strftime("%D")
 
-        #make sure the user is logged in
-        Zoom_Functions.login()
-
     #make sure today is not a holiday or final day
         if date in Holidays == False and date in Finals_Week1 == False and date in Finals_Week2 == False:
 

@@ -1,9 +1,8 @@
 import subprocess
 import configparser
 import Zoom_Functions
-import keyboard
 import time
-from pywinauto import Application
+
 
 config = configparser.ConfigParser()
 config.read("config.ini")
