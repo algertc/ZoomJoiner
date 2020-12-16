@@ -8,6 +8,8 @@ from pywinauto import Desktop, Application
 
 
 def login():
+    global app
+    global main_win
     # Programatically kills then starts and signs into zoom all using the api
     subprocess.call("taskkill /IM \"Zoom.exe\" /F")  # If this breaks, you could use $> tasklist | more and grep the output to a file then parse it for the word "zoom" to get the process ID and kill it that way.
     subprocess.call("taskkill /IM \"chrome.exe\" /F")
@@ -96,9 +98,19 @@ def leaveMeeting():
     #todo IMPORTANT ---- IF the control identifier is there click it. Figure out how to store the control identifiers to a variable or file. File is likely better then use a file parsing lib
     #no need to set up the active window again since it has already been done in the login func
     #lets logout
-    #global app
-    main_win = app.control
-    main_win.print_control_identifiers()
+    inMeeting = app.window(title='Zoom')
+    #erase the file's old contents
+    file = open("ctlIDS.txt", "r+")
+    file.truncate(0)
+    file.close()
+    # write the control identifiers to a file
+    inMeeting.print_control_identifiers(filename="ctlIDS.txt")
+    with open('ctlIDS.txt') as f:
+        if 'replaceWithLeavemeeting button' in f.read():
+            pass
+            #click the button here
+        #else
+            # maybe loop?
 
-login()
+#login()
 #leaveMeeting()
