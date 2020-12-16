@@ -27,13 +27,6 @@ Finals_Week1 = ["12/15/20", "12/16/20", "12/17/20", "12/18/20"]
 Finals_Week2 = ["5/24/21", "5/25/21", "5/26/21", "5/27/21", "5/28/21"]
 #------------------------------------------------------------------------------------------------------------------------------####
 
-
-
-
-
-
-
-
 def maain():
     while True:
         #store the date
@@ -51,8 +44,7 @@ def maain():
                 # tuesday/thursday schedule
                 if datetime.today().weekday() == tuesday or datetime.today().weekday() == thursday:
                     if datetime.now().strftime("%H:%M") == config['SCHEDULE']['period1_startTime']:
-                        Join.period1() #todo Meeting.py then meeting.chem. Meeting.chem will handle the breakout rooms and stuff
-                        #TODO IF: the header for login with google exists in the window, quit zoom, run login(), then run the join again
+                        Join.period1()
                         #sleep time makes sure you dont join multiple times
                         time.sleep(60)
 
