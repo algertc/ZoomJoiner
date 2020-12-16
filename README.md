@@ -5,11 +5,7 @@
 
 
 
-[![](https://img.shields.io/badge/Platform-Windows-blue) ](#)
-
-
-
-![](https://img.shields.io/badge/Platform-Windows-blue) ![](https://img.shields.io/badge/Stable-No%20release-red) ![](https://img.shields.io/badge/License-GNU-brightgreen) ![](https://img.shields.io/badge/Discord-Wonton0651-blue)
+[![](https://img.shields.io/badge/Platform-Windows-blue) ](#)      [![](https://img.shields.io/badge/License-GNU-brightgreen)](#)     [![](https://img.shields.io/badge/Stable-No%20release-red)](#) [![](https://img.shields.io/badge/Discord-Wonton0651-blue)](#)
 
 
 This is a program to automatically join and leave your zoom classes. It does not use pyautogui and works only by using the windows API. This method is much more reliable than existing programs and does not require the screen resolution to be the same. This makes it highly distributable and overall just better than using a program to control the mouse and keyboard. Windows only due to its windows API dependencies. Sorry Mac users. AUHSD bock schedule is preloaded, just paste in your class links and system username in the config!
