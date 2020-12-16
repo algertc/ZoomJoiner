@@ -69,30 +69,9 @@ def period7():
     time.sleep(260)
     Zoom_Functions.ConnectAndMute()
 
-def period8():
+def demo():
     Zoom_Functions.login()
-    joinmeeting("https://auhsdschools.zoom.us/j/89027894656?pwd=K1JjNDlBRTdhbG9JSGsrNitaOHVidz09")
+    joinmeeting("DEMOLINK")
     time.sleep(30)
     Zoom_Functions.ConnectAndMute()
-period8()
-# def law():
-#     joinmeeting("https://auhsdschools.zoom.us/j/81548114514?uname=Charles+Algert#success")
-#
-# def chemistry():
-#     joinmeeting("https://auhsdschools.zoom.us/j/7753695672?pwd=NTB1V1FRYTRnalBlYlBidnhXdDd2dz09#success")
-#
-# def english():
-#     joinmeeting("https://auhsdschools.zoom.us/j/89099587841?uname=Charles+Algert#success")
-#
-#
-# def spanish():
-#   joinmeeting("https://auhsdschools.zoom.us/j/3163825343?uname=Charles+Algert#success")
-#
-#
-# def math():
-#     joinmeeting("https://auhsdschools.zoom.us/j/6602696666?pwd=aE1vQVVvd1c4SDNTRThITGxaYjJ1QT09&uname=Charles+Algert#success")
-#
-#
-# def art():
-#     joinmeeting("https://auhsdschools.zoom.us/j/85814123045?pwd=c25rUmdFcWhrZ00ydGVEK3hwNDdidz09&uname=Charles+Algert#succes")
-
+demo()
