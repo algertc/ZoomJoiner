@@ -1,9 +1,9 @@
 import subprocess
 import configparser
+import Zoom_Functions
 
 config = configparser.ConfigParser()
 config.read("config.ini")
-print(config['CLASSES']['period1_link'])
 #config['CLASSES'] = {'ServerAliveInternal': '45'}
 
 
@@ -28,27 +28,34 @@ def joinmeeting(url):
 
 
 def period1():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period1_link']))
 
 def period2():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period2_link']))
 
 def period3():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period3_link']))
 
 def period4():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period4_link']))
 
 def period5():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period5_link']))
 
 def period6():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period6_link']))
 
 def period7():
+    Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period7_link']))
 
-
+period7()
 # def law():
 #     joinmeeting("https://auhsdschools.zoom.us/j/81548114514?uname=Charles+Algert#success")
 #

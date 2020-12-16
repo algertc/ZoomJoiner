@@ -2,11 +2,7 @@ from datetime import datetime
 import Join
 import time
 import configparser
-import subprocess
-import psutil
-import pywinauto
-from selenium import webdriver
-import keyboard
+import Zoom_Functions
 
 
 #load the config
@@ -31,104 +27,20 @@ Finals_Week1 = ["12/15/20", "12/16/20", "12/17/20", "12/18/20"]
 Finals_Week2 = ["5/24/21", "5/25/21", "5/26/21", "5/27/21", "5/28/21"]
 #------------------------------------------------------------------------------------------------------------------------------####
 
-def login():
-    #Programatically kills then starts and signs into zoom all using the api
-    from pywinauto import Desktop, Application
-
-    #First lets kill zoom to ensure consistency
-    subprocess.call("taskkill /IM \"Zoom.exe\" /F")  #If this breaks, you could use $> tasklist | more and grep the output to a file then parse it for the word "zoom" to get the process ID and kill it that way.
-    subprocess.call("taskkill /IM \"chrome.exe\" /F")
-    #launch zoom with win32 api
-    app = Application(backend="uia").start("zoom --login")
-    main_win = app.window(title='Zoom')
-    #todo find the log out wrapper and log the user out
-
-
-    #if the app opens to the "zoom cloud meetings" welcome screen, lets sign in
-    try:
-        # defines this screen: "JoinMeetingANDSignIn_Screen.png" as the window
-        JoinMeetingANDSignIn_Screen = app.window(title='Zoom Cloud Meetings')
-        time.sleep(0.5)
-        #selects the control identifier for the "sign in" button and activates it
-        startscreen = JoinMeetingANDSignIn_Screen.child_window(title="Sign In", control_type="Button")
-        startscreen.click()
-
-    except:
-        pass
-
-
-    try:
-        SigninWithGoogleScreen = app.window(title='Zoom Cloud Meetings')
-        signInWithGoogle = SigninWithGoogleScreen.child_window(title="Sign In with Google", control_type="Button")
-        signInWithGoogle.click()
-
-        #SigninWithGoogleScreen.print_control_identifiers()
-
-    except:
-        pass
-
-    if "chrome.exe" in (p.name() for p in psutil.process_iter()):
-        print("Chromium.exe process is running")
-        #processID = [p.info for p in psutil.process_iter(attrs=['pid', 'name']) if 'Sign In - Google Accounts' in p.info['name']]
-        #print(processID)
-        time.sleep(4)
-        #todo might need to select window first
-        # keyboard.write(config['GOOGLE_CREDENTIALS']['email'])
-        # keyboard.press("enter")
-        # time.sleep(2)
-        # keyboard.write(config['GOOGLE_CREDENTIALS']['password'])
-        # keyboard.press("enter")
-        time.sleep(2)
-        keyboard.press("tab")
-        time.sleep(0.3)
-        keyboard.press("tab")
-        time.sleep(0.6)
-        keyboard.press("enter")
-        time.sleep(0.4)
-        keyboard.press("enter")
-        #
-        time.sleep(3)
-        keyboard.press("tab")
-        time.sleep(0.4)
-        keyboard.press("tab")
-        time.sleep(0.4)
-        keyboard.press("enter")
-        time.sleep(0.4)
-        keyboard.press("enter")
-        #pywinauto.application.findwindows.find_element("Edge")
-        #chrome = Application(backend="uia").connect(path="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe")
-        #chromewindow = chrome.top_window()
-
-
-        #mainwin_edge = edge.window(title='Sign In - Google Accounts and')
 
 
 
 
-    #todo return control identifiers or write to file and read the file
 
-    # try:
-    #     #todo IF control identifiers has attribute "child_window(title="Sign In", control_type="Button")" :
-    #     time.sleep(1)
-    #     signIn.click()
-    #     #time.sleep(0.3)
-    #     time.sleep(1)
-    #     #todo check IF control identifiers has attribute "title="Sign In with Google", control_type="Button"
-    #     signInWithGoogle = main_win.child_window(title="Sign In with Google", control_type="Button")
-    #     signInWithGoogle.click()
-    #     #todo check if browser has opened
-    #
-    # except:
-    #     #todo possibly try again before printing error. Make a counter and print on the second time through
-    #     print("SigninError")
+
 
 def maain():
     while True:
         #store the date
         date = datetime.now().strftime("%D")
 
-        #todo make sure the user is logged in
-        #login()
+        #make sure the user is logged in
+        Zoom_Functions.login()
 
     #make sure today is not a holiday or final day
         if date in Holidays == False and date in Finals_Week1 == False and date in Finals_Week2 == False:
