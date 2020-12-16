@@ -98,13 +98,10 @@ def leaveMeeting():
     #todo IMPORTANT ---- IF the control identifier is there click it. Figure out how to store the control identifiers to a variable or file. File is likely better then use a file parsing lib
     #no need to set up the active window again since it has already been done in the login func
     #lets logout
-    inMeeting = app.window(title='Zoom')
-    #erase the file's old contents
-    file = open("ctlIDS.txt", "r+")
-    file.truncate(0)
-    file.close()
+    #inMeeting = Application.connect(path="C:\\Users\\alger\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe")
     # write the control identifiers to a file
-    inMeeting.print_control_identifiers(filename="ctlIDS.txt")
+    time.sleep(18)
+    #inMeeting.print_control_identifiers(filename="ctlIDS.txt")
     with open('ctlIDS.txt') as f:
         if 'replaceWithLeavemeeting button' in f.read():
             pass
@@ -112,5 +109,17 @@ def leaveMeeting():
         #else
             # maybe loop?
 
+def ConnectAndMute():
+    time.sleep(240) #todo change to 3 minutes in case teacher is slow with breakout room
+    keyboard.send("enter")
+    time.sleep(0.3)
+    keyboard.send("tab")
+    time.sleep(0.3)
+    keyboard.send("tab")
+    time.sleep(0.3)
+    keyboard.send("tab")
+    time.sleep(0.3)
+    keyboard.send("enter")
+
 #login()
-#leaveMeeting()
+leaveMeeting()

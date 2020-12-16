@@ -1,14 +1,15 @@
 import subprocess
 import configparser
 import Zoom_Functions
+import keyboard
+import time
+from pywinauto import Application
 
 config = configparser.ConfigParser()
 config.read("config.ini")
-#config['CLASSES'] = {'ServerAliveInternal': '45'}
 
 
 def joinmeeting(url):
-    #todo if platform == windows, run this. Add if plat == mac and the correct command
     cmd = "zoom --url=" + str(url)
     subprocess.run(cmd)
     '''
@@ -30,32 +31,51 @@ def joinmeeting(url):
 def period1():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period1_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period2():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period2_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period3():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period3_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period4():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period4_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period5():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period5_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period6():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period6_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
 def period7():
     Zoom_Functions.login()
     joinmeeting(str(config['CLASSES']['period7_link']))
+    time.sleep(260)
+    Zoom_Functions.ConnectAndMute()
 
-period7()
+def period8():
+    Zoom_Functions.login()
+    joinmeeting("https://auhsdschools.zoom.us/j/89027894656?pwd=K1JjNDlBRTdhbG9JSGsrNitaOHVidz09")
+    time.sleep(30)
+    Zoom_Functions.ConnectAndMute()
+period8()
 # def law():
 #     joinmeeting("https://auhsdschools.zoom.us/j/81548114514?uname=Charles+Algert#success")
 #
